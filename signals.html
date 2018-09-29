@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-09-29 Sat 14:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7d13ea6">1. Unix Signal Basics</a>
+<ul>
+<li><a href="#org24f6bf0">1.1. Concepts and Overview</a></li>
+<li><a href="#orga5a2cca">1.2. Types of signals</a></li>
+<li><a href="#orged67287">1.3. Life of a signal</a></li>
+<li><a href="#org54bc982">1.4. Signal Handlers</a>
+<ul>
+<li><a href="#orgaedb106">1.4.1. Basic Signal Handler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7d13ea6" class="outline-2">
+<h2 id="org7d13ea6"><span class="section-number-2">1</span> Unix Signal Basics</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This document is intended to be a basic outline of UNIX signals.
+</p>
+<ul class="org-ul">
+<li>Specifically, it will cover:
+<ol class="org-ol">
+<li>Different signals and their purposes</li>
+<li>Circumstances in which the kernel may generate a signal for a process, and the syscalls
+that one process may use to send a signal to another process</li>
+<li>How a process responds to a signal by default, and the means by which a process can change
+its response to a signal with a 'signal handler', a programmer-defined function that is
+automatically invoked on receipt of a signal</li>
+<li>How a process can suspend execution and wait for the delivery of a signal</li>
+</ol></li>
+</ul>
+</div>
+
+<div id="outline-container-org24f6bf0" class="outline-3">
+<h3 id="org24f6bf0"><span class="section-number-3">1.1</span> Concepts and Overview</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+A <i>signal</i> is a notification to a process that an event has occurred. Also known as <i>software interrupts</i>.
+</p>
+<ul class="org-ul">
+<li>Events which cause the kernel to generate a signal for a process:
+<ol class="org-ol">
+<li>A hardware exception occurred, meaning that the hardware detected a fault condition
+that was notified to the kernel, which in turn sent a signal to the process concerned.
+<ul class="org-ul">
+<li>Examples of hardware exceptions
+<ol class="org-ol">
+<li>Executing a malformed machine-language instruction</li>
+<li>Dividing by 0</li>
+<li>Referencing inaccessible memory</li>
+</ol></li>
+</ul></li>
+<li>User typed one of the terminal special characters that generate signals.
+These characters include the <i>interrupt</i> character (usually C-c) and the <i>suspend</i> character (C-z)</li>
+<li>A software event, such as
+<ol class="org-ol">
+<li>Input became available on a file descriptor</li>
+<li>Terminal window resize</li>
+<li>Timer went off</li>
+<li>Process's CPU time limit exceeded</li>
+<li>Child of process terminated</li>
+</ol></li>
+</ol></li>
+</ul>
+
+<p>
+Each signal is defined as a unique (small) integer, starting sequentially from 1.
+Signals are defined in <code>&lt;signal.h&gt;</code> with symbolic names of the form SIGxxx.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5a2cca" class="outline-3">
+<h3 id="orga5a2cca"><span class="section-number-3">1.2</span> Types of signals</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+This section has short descriptions of some of the most common signals.
+</p>
+<dl class="org-dl">
+<dt>SIGINT </dt><dd>When the user types the terminal <i>interrupt</i> character(C-c), the terminal driver
+sends this signal to the foreground process group. The default action
+of this signal is to terminate the process.</dd>
+<dt>SIGKILL</dt><dd>This is the <i>kill</i> signal. It cannot be blocked, ignored, or caught by a handler.</dd>
+<dt>SIGQUIT</dt><dd>When the user types the <i>quit</i> character (C-\), this signal is send to the foreground
+process group. By default, this signal terminates a process and causes it to produce a
+<i>core dump</i>, which can then be used for debugging. Useful when a program is stuck in an
+infinite loop or is otherwise not responding. By sending SIGQUIT, we can load the resulting
+<i>core dump</i> with <i>gdb</i> and use the <i>backtrace</i> command to obtain a stack trace and see
+which part of the program code was executing.</dd>
+<dt>SIGSEGV</dt><dd>Generated when a program makes an invalid memory reference, including:
+<ul class="org-ul">
+<li>Referenced a page that didn't exist</li>
+<li>Process tried to update a location in read-only memory</li>
+<li>Process tried to access a part of kernel memory while running in user mode.</li>
+</ul></dd>
+<dt>SIGSTOP</dt><dd>This is the <i>stop</i> signal. It cannot be blocked, ignored, or caught by a handler.</dd>
+<dt>SIGTERM</dt><dd>This is the default signal send by the <i>kill</i> and <i>killall</i> commands.</dd>
+<dt>SIGTRAP</dt><dd>This is the signal used to implement debugger breakpoints and system call tracing
+e.g <code>strace(1)</code></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orged67287" class="outline-3">
+<h3 id="orged67287"><span class="section-number-3">1.3</span> Life of a signal</h3>
+<div class="outline-text-3" id="text-1-3">
+<ol class="org-ol">
+<li><i>Generation</i>
+A signal is <i>generated</i> by some event.</li>
+<li><i>Pending</i>
+Between the time it is generated and it is delivered, the signal is <i>pending</i>.</li>
+<li><i>Delivery</i>
+Once generated, a signal is <i>delivered</i> to a process, which then takes some action in response.</li>
+<li>Possible default actions upon delivery:
+<ol class="org-ol">
+<li>Signal is <i>ignored</i>; discarded by kernel and has no effect(process never knows).</li>
+<li>Process is <i>terminated</i> (killed). Sometimes referred to as <i>abnormal process termination</i>.</li>
+<li><i>Core dump file</i> is generated, and process is terminated. A core dump file contains
+an image of the virtual memory of the process, which can be loaded into a debugger in order
+to inspect the state of the process at the time of termination.</li>
+<li>Process is <i>stopped</i> - execution of process is suspended.</li>
+<li>Execution is <i>resumed</i> after previously being stopped.</li>
+</ol></li>
+<li>Instead of accepting a default action, a program can change the action that occurs upon delivery.
+This is known as setting the <i>disposition</i> of the signal.
+<ol class="org-ol">
+<li><i>Default Action</i>
+Useful to undo an earlier change of the disposition of the signal to something older</li>
+<li><i>Ignored</i>
+Useful for a signal whose default action would be to terminate the process</li>
+<li><i>Signal Handler</i>
+A <i>signal handler</i> is a function, written by the programmer, that performs appropriate
+tasks in response to the delivery of a signal.</li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org54bc982" class="outline-3">
+<h3 id="org54bc982"><span class="section-number-3">1.4</span> Signal Handlers</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+A <i>signal handler</i> is a function that is called when a specified signal is delivered to a process.
+Invocation of a <i>signal handler</i> may interrupt the main program flow at any time; the kernel calls
+the handler on the process's behalf, and when the handler returns, execution of the program resumes
+at the point where the handler interrupted.
+Steps of signal handler:
+</p>
+<ol class="org-ol">
+<li>Delivery of signal</li>
+<li>Kernel calls signal handler on behalf of process</li>
+<li>Code of signal handler is executed</li>
+<li>Program resumes at point of interruption</li>
+</ol>
+</div>
+<div id="outline-container-orgaedb106" class="outline-4">
+<h4 id="orgaedb106"><span class="section-number-4">1.4.1</span> Basic Signal Handler</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+UNIX provides two ways of changing the <i>disposition</i> of a signal: <code>signal()</code> and <code>sigaction()</code>.
+I will be using <code>signal()</code><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #6c3163;">#include</span> <span style="color: #3a81c3;">&lt;</span><span style="color: #2d9574;">signal.h</span><span style="color: #3a81c3;">&gt;</span>
+
+<span style="color: #ba2f59; font-weight: bold;">void</span><span style="color: #3a81c3;">(</span>*signal<span style="color: #6c3163;">(</span><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">sig</span>, <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #2d9574;">(</span>*<span style="color: #6c3163; font-weight: bold;">handler</span><span style="color: #2d9574;">)(</span><span style="color: #ba2f59; font-weight: bold;">int</span><span style="color: #2d9574;">)</span><span style="color: #6c3163;">)</span><span style="color: #3a81c3;">)(</span><span style="color: #ba2f59; font-weight: bold;">int</span><span style="color: #3a81c3;">)</span>;
+    <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">returns previous signal disposition on success, or SIG_ERR on error </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+</pre>
+</div>
+
+<p>
+The first argument, <i>sig</i>, is the signal whose <i>disposition</i> we want to change.
+The second argument, <i>handler</i> is the address of the function that should be called when this
+signal is delivered. This function returns <i>void</i> and takes one integer argument.
+This function is also known as the <i>signal handler</i>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">signal.c </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #3a81c3;">&lt;</span><span style="color: #2d9574;">stdlib.h</span><span style="color: #3a81c3;">&gt;</span>
+<span style="color: #6c3163;">#include</span> <span style="color: #3a81c3;">&lt;</span><span style="color: #2d9574;">signal.h</span><span style="color: #3a81c3;">&gt;</span>
+
+<span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">sig_handler</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">sig</span><span style="color: #3a81c3;">)</span> <span style="color: #3a81c3;">{</span>
+    printf<span style="color: #6c3163;">(</span><span style="color: #2d9574;">"Your signal handler\n"</span><span style="color: #6c3163;">)</span>;
+    exit<span style="color: #6c3163;">(</span><span style="color: #4e3163;">1</span><span style="color: #6c3163;">)</span>;
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">void</span><span style="color: #3a81c3;">)</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">j</span>;
+
+    <span style="color: #3a81c3; font-weight: bold;">if</span><span style="color: #6c3163;">(</span>signal<span style="color: #2d9574;">(</span>SIGINT, sig_handler<span style="color: #2d9574;">)</span> == SIG_ERR<span style="color: #6c3163;">)</span>
+        perror<span style="color: #6c3163;">(</span><span style="color: #2d9574;">"signal"</span><span style="color: #6c3163;">)</span>;
+
+    <span style="color: #3a81c3; font-weight: bold;">for</span><span style="color: #6c3163;">(</span>j = <span style="color: #4e3163;">0</span>; ;j++<span style="color: #6c3163;">)</span> <span style="color: #6c3163;">{</span>
+        printf<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"%d\n"</span>, j<span style="color: #2d9574;">)</span>;
+        sleep<span style="color: #2d9574;">(</span><span style="color: #4e3163;">3</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+
+<p>
+This short program defines a signal handler, <code>sig_handler(int sig)</code>.
+Run it in a terminal and press C-c to send the SIGINT(signal interrupt) to it, and observe that your
+signal handler prints "Your signal handler", and then exits with a status of 1 (one).
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+The signal() syscall is the original API for setting the disposition of a signal.
+However, signal() behaves differently across UNIX implementations.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-09-29 Sat 14:40</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
