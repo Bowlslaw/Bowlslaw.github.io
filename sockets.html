@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-10-01 Mon 12:38 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge22984a">1. Introduction to Linux Sockets</a>
+<ul>
+<li><a href="#org8f955c2">1.1. Overview</a>
+<ul>
+<li><a href="#orge48db7c">1.1.1. Communication Domains</a></li>
+<li><a href="#org33c79b4">1.1.2. Socket Types</a></li>
+<li><a href="#org520ac38">1.1.3. Socket System Calls</a></li>
+<li><a href="#org55f3c44">1.1.4. Generic Socket Address Structures: <i>struct sockaddr</i></a></li>
+</ul>
+</li>
+<li><a href="#orgf2abdb4">1.2. Stream Sockets</a>
+<ul>
+<li><a href="#org3415f3e">1.2.1. Listening for Incoming Connections: <code>listen()</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="listen">listen</span>&#xa0;<span class="accept">accept</span></span></a></li>
+<li><a href="#org2da002b">1.2.2. Accepting a Connection: <code>accept()</code></a></li>
+<li><a href="#org3ad0561">1.2.3. Connecting to a Peer Socket: <code>connect()</code></a></li>
+<li><a href="#org3410e28">1.2.4. Connection Termination: <code>close()</code></a></li>
+</ul>
+</li>
+<li><a href="#org732f620">1.3. Datagram Sockets</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge22984a" class="outline-2">
+<h2 id="orge22984a"><span class="section-number-2">1</span> Introduction to Linux Sockets</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Sockets are a method of <i>Inter-Process Communication</i> that allow data to be exchanged between applications
+on the same host, or on different hosts connected via network. The first widespread implementation of
+the sockets API appeared with 4.2BSD in 1983. This API has been ported to virtually every UNIX derivative.
+</p>
+</div>
+
+<div id="outline-container-org8f955c2" class="outline-3">
+<h3 id="org8f955c2"><span class="section-number-3">1.1</span> Overview</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+In a typical client-server scenario, applications commucate using sockets as follows:
+</p>
+<ul class="org-ul">
+<li>Each application creates a socket. A socket is the aparatus that allows communication.</li>
+<li>The server binds its socket to a well-known address (name) so that clients can locate it.</li>
+</ul>
+
+<p>
+A socket is created using the <code>socket()</code> syscall, which returns a file descriptor used to refer to
+the socket in subsequent syscalls:
+  <code>fd = socket(domain, type, protocol);</code>
+</p>
+</div>
+
+<div id="outline-container-orge48db7c" class="outline-4">
+<h4 id="orge48db7c"><span class="section-number-4">1.1.1</span> Communication Domains</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Sockets exist in a <i>communication domain</i>, which determines:
+</p>
+<ul class="org-ul">
+<li>the method of identifying a socket</li>
+<li>the range of communication</li>
+</ul>
+
+<p>
+Modern operating systems support at least one of the following domains:
+</p>
+<ul class="org-ul">
+<li>UNIX (AF<sub>UNIX</sub>) domain allows communication between applications on the same host.</li>
+<li>IPv4 (AF<sub>INET</sub>) domain allows communication between applications running on hosts
+connected via an Internet Protocol version 4 network</li>
+<li>IPv6 (IF<sub>INET6</sub>) domain allows communication between applications running on hosts
+connected via an Internet Protocol version 6. Although IPv6 is designed as IPv4's successor,
+IPv4 is still the most widely used.</li>
+</ul>
+
+<p>
+#+Table 1
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Domain</th>
+<th scope="col" class="org-left">Communication</th>
+<th scope="col" class="org-left">Communication</th>
+<th scope="col" class="org-left">Address Format</th>
+<th scope="col" class="org-left">Address Structure</th>
+</tr>
+
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">between applications</th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">AF<sub>UNIX</sub></td>
+<td class="org-left">within kernel</td>
+<td class="org-left">same host</td>
+<td class="org-left">pathname</td>
+<td class="org-left"><i>sockaddr<sub>un</sub></i></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">AF<sub>INET</sub></td>
+<td class="org-left">via IPv4</td>
+<td class="org-left">hosts connect via</td>
+<td class="org-left">32-bit IPv4 address</td>
+<td class="org-left"><i>sockaddr<sub>in</sub></i></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">IPv4 network</td>
+<td class="org-left">+ 16-bit port number</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">AF<sub>INET6</sub></td>
+<td class="org-left">via IPv6</td>
+<td class="org-left">hosts connected via</td>
+<td class="org-left">128-bit IPv6 address</td>
+<td class="org-left"><i>sockaddr<sub>in6</sub></i></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">IPv6 network</td>
+<td class="org-left">+ 16-bit port number</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org33c79b4" class="outline-4">
+<h4 id="org33c79b4"><span class="section-number-4">1.1.2</span> Socket Types</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+Every sockets implementation provides at least two types of sockets:
+</p>
+<ol class="org-ol">
+<li><p>
+Stream Sockets(SOCK<sub>STREAM</sub>)(TCP) :: Provide <i>reliable, bi-directional, byte-stream</i> communication.
+</p>
+<dl class="org-dl">
+<dt>Reliable      </dt><dd>Guaranteed that either the transmitted data will arrive intact, or that we will
+receive a notification of a probable failure.</dd>
+<dt>Bi-Directional</dt><dd>Data may be transmitted in either direction between 2 (two) sockets.</dd>
+<dt>Byte-stream   </dt><dd>No concept of <i>message boundaries</i>.</dd>
+</dl>
+
+<p>
+Stream sockets operate in connected pairs, and are described as <i>connection-oriented</i> for this reason.
+<i>Peer socket</i> (remote socket) is the socket at the other end of the connection.
+<i>Peer address</i> (remote address) denotes the address of the <i>peer socket</i>.
+<i>stream socket</i> can only be connected to one peer.
+</p></li>
+
+<li>Datagram Sockets(SOCK<sub>DGRAM</sub>)(UDP) :: Allow data to be exchanged in the form of a <i>datagram</i>.
+<dl class="org-dl">
+<dt>Unreliable    </dt><dd>No guarantee that the transmitted data will arrive inact. Messages may
+arrive out-of-order, duplicated, or not at all.</dd>
+<dt>Connectionless</dt><dd>Datagrams do not need to be connected to another socket.</dd>
+</dl></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org520ac38" class="outline-4">
+<h4 id="org520ac38"><span class="section-number-4">1.1.3</span> Socket System Calls</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+Important socket syscalls:
+</p>
+<dl class="org-dl">
+<dt><code>socket()</code> </dt><dd>Create a new socket.</dd>
+<dt><code>bind()</code>   </dt><dd>Bind a socket to an address. Usually, a server uses this call to bind its socket
+to a well-known address so clients can locate it.</dd>
+<dt><code>listen()</code> </dt><dd>Allow a stream socket to accept incoming connections.</dd>
+<dt><code>accept()</code> </dt><dd>Accept a connection from a peer application on a listening stream socket.
+Optionally, return address of peer socket.</dd>
+<dt><code>connect()</code></dt><dd>Establish a connection with another socket.</dd>
+</dl>
+</div>
+
+<ol class="org-ol">
+<li><a id="org8e7d27d"></a>Creating a Socket: <code>socket()</code><br />
+<div class="outline-text-5" id="text-1-1-3-1">
+<p>
+On success, <code>socket()</code> returns a file descriptor used to refer to the newly created socket.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #6c3163;">#include</span> <span style="color: #3a81c3;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #3a81c3;">&gt;</span>
+
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">socket</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">domain</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">type</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">protocol</span><span style="color: #3a81c3;">)</span>;
+    <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">return file descriptor on success, or -1 on error </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+</pre>
+</div>
+
+<dl class="org-dl">
+<dt>domain  </dt><dd>Specifies the communication domain for the socket.</dd>
+<dt>type    </dt><dd>Specifies socket type e.g. SOCK<sub>STREAM</sub> or SOCK<sub>DGRAM</sub>.</dd>
+<dt>protocol</dt><dd>In this document, <i>protocol</i> will always be 0. Non-zero protocols are used with different
+socket types e.g. IPPROTO<sub>RAW</sub> fo raw sockets (SOCK<sub>RAW</sub>).</dd>
+</dl>
+</div>
+</li>
+
+<li><a id="orgd0fbb20"></a>Binding a Socket to an Address: <code>bind()</code><br />
+<div class="outline-text-5" id="text-1-1-3-2">
+<p>
+We bind a server's socket to a well-known address.<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #6c3163;">#include</span> <span style="color: #3a81c3;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #3a81c3;">&gt;</span>
+
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">bind</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">sockfd</span>, <span style="color: #3a81c3; font-weight: bold;">const</span> <span style="color: #3a81c3; font-weight: bold;">struct</span> <span style="color: #ba2f59; font-weight: bold;">sockaddr</span> *<span style="color: #715ab1;">addr</span>, <span style="color: #ba2f59; font-weight: bold;">socklen_t</span> <span style="color: #715ab1;">addrlen</span><span style="color: #3a81c3;">)</span>;
+<span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">return 0 on succes, -1 on error </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+</pre>
+</div>
+
+<dl class="org-dl">
+<dt>sockfd   </dt><dd>File descriptor obtained from <code>socket()</code>.</dd>
+<dt>addr     </dt><dd>Pointer to a structure specifying the address to which this socket is to be bound.
+Type of structure passed depends on the socket domain.</dd>
+<dt>addrlen  </dt><dd>Size of the address structure.</dd>
+<dt>socklen<sub>t</sub></dt><dd>This data type is used for <i>addrlen</i> is an integer type specified by <b>SUSv3</b></dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org55f3c44" class="outline-4">
+<h4 id="org55f3c44"><span class="section-number-4">1.1.4</span> Generic Socket Address Structures: <i>struct sockaddr</i></h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+Referring to <b>Table 1</b>, we see that each sock domain uses a different address format.
+For example, Unix domain sockets use pathnames. Internet domain sockets use the IP address and port number.
+For each socket domain, a different structure type is defined to store a socket address.
+Because syscalls like <code>bind()</code> are generic to all socket domains, they must be able to accept address
+structures of any type.
+To solve this problem, the sockets API defines a generic address structure: <code>struct sockaddr</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #3a81c3; font-weight: bold;">struct</span> <span style="color: #ba2f59; font-weight: bold;">sockaddr</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #ba2f59; font-weight: bold;">sa_family_t</span> <span style="color: #715ab1;">sa_family</span>;    <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Address family (AF_*) </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+    <span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">sa_data</span><span style="color: #6c3163;">[</span><span style="color: #4e3163;">14</span><span style="color: #6c3163;">]</span>;         <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Socket address </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+<span style="color: #3a81c3;">}</span>;
+</pre>
+</div>
+
+<dl class="org-dl">
+<dt>sa<sub>family</sub><sub>t</sub></dt><dd>Data type that is an integer type.</dd>
+<dt>sa<sub>family</sub>  </dt><dd>Field in <i>struct sockaddr</i></dd>
+<dt>(no term)</dt><dd>The value in the family field determines the size and format of the address stored in the structure.</dd>
+</dl>
+
+<p>
+This structure serves as a template for all domain-specific address structures.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf2abdb4" class="outline-3">
+<h3 id="orgf2abdb4"><span class="section-number-3">1.2</span> Stream Sockets</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Streams sockets, as previously stated, require a connection between two sockets.
+The <code>socket()</code> syscall creates the socket required for communication.
+Two sockets are connected as follows:
+</p>
+<ol class="org-ol">
+<li>One application calls <code>bind()</code>, binding the socket to a well-known address.</li>
+<li>The same application calls <code>listen()</code>, to notify the kernel that it will accept connections.</li>
+<li>The other application calls <code>connect()</code>, specifying the address of the socket.</li>
+<li>The application that called <code>listen()</code> accepts the connection by calling <code>accept()</code>.</li>
+<li>If <code>accept()</code> is completed before the peer application calls <code>connect()</code>, then the <code>accept()</code> blocks.</li>
+<li>Once a connection is established, data can be transmitted in either direction, until one
+calls <code>close()</code>. Communication is done using <code>read()</code> and <code>write()</code>.</li>
+</ol>
+
+<p>
+Stream sockets can be either <i>active</i> or <i>passive</i>
+</p>
+<ul class="org-ul">
+<li>By default, a socket created with <code>socket()</code> is <i>active</i>. An active socket can be used in a 
+<code>connect()</code> call to establish a connection to a <i>passive</i> socket. Also known as an <i>active open</i>.</li>
+<li>A <i>passive</i> socket, also known as <i>listening</i> socket, is a socket that allows incoming connections
+by calling <code>listen()</code>. Also known as a <i>passive open</i>.</li>
+</ul>
+
+<p>
+Most of the time, the <i>client</i> performs the active open, and the <i>server</i> performs the passive open.
+</p>
+</div>
+
+<div id="outline-container-org3415f3e" class="outline-4">
+<h4 id="org3415f3e"><span class="section-number-4">1.2.1</span> Listening for Incoming Connections: <code>listen()</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="listen">listen</span>&#xa0;<span class="accept">accept</span></span></h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+The <code>listen()</code> syscall sets the stream socket referred to by the file descriptor <i>sockfd</i> as <i>passive</i>.
+This socket it then used to accept a connection from active sockets.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #6c3163;">#include</span> <span style="color: #3a81c3;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #3a81c3;">&gt;</span>
+
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">listen</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">sockfd</span>, <span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">backlog</span><span style="color: #3a81c3;">)</span>;
+    <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">return 0 on success, -1 on error </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+</pre>
+</div>
+
+<dl class="org-dl">
+<dt>sockfd </dt><dd>File descriptor of socket</dd>
+<dt>backlog</dt><dd>If the client calls <code>connect()</code> before the server calls <code>accept()</code>, this results in
+a <i>pending connection</i>. The kernel must record information about each pending connection
+request, so that <code>accept()</code> can be processed. Backlog allows us to limit the number of
+pending connections.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org2da002b" class="outline-4">
+<h4 id="org2da002b"><span class="section-number-4">1.2.2</span> Accepting a Connection: <code>accept()</code></h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+The <code>accept()</code> syscall accepts an incoming connection on the listening stream socket referred
+to by <i>sockfd</i>. If there are no <i>pending</i> connections when <code>accept()</code> is called, it blocks.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #6c3163;">#include</span> <span style="color: #3a81c3;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #3a81c3;">&gt;</span>
+
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">accept</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">sockfd</span>, <span style="color: #3a81c3; font-weight: bold;">struct</span> <span style="color: #ba2f59; font-weight: bold;">sockaddr</span> *<span style="color: #715ab1;">addr</span>, <span style="color: #ba2f59; font-weight: bold;">socklen_t</span> *<span style="color: #715ab1;">addrlen</span><span style="color: #3a81c3;">)</span>;
+    <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">return file descriptor on success, -1 on error </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+</pre>
+</div>
+
+<dl class="org-dl">
+<dt>sockfd </dt><dd>File descriptor of socket</dd>
+<dt>*addr  </dt><dd>Points to the structure used to return the socket address</dd>
+<dt>addrlen</dt><dd>Points to integer that is already initialized to the size of the buffer pointed to by <i>addr</i></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org3ad0561" class="outline-4">
+<h4 id="org3ad0561"><span class="section-number-4">1.2.3</span> Connecting to a Peer Socket: <code>connect()</code></h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+The <code>connect()</code> syscall connects the active socket referred to by <i>sockfd</i> to the listening socket
+whose address is specified by <i>addr</i> and <i>addrlen</i>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #6c3163;">#include</span> <span style="color: #3a81c3;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #3a81c3;">&gt;</span>
+
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">connect</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">sockfd</span>, <span style="color: #3a81c3; font-weight: bold;">const</span> <span style="color: #3a81c3; font-weight: bold;">struct</span> <span style="color: #ba2f59; font-weight: bold;">sockaddr</span> *<span style="color: #715ab1;">addr</span>, <span style="color: #ba2f59; font-weight: bold;">socklen_t</span> <span style="color: #715ab1;">addrlen</span><span style="color: #3a81c3;">)</span>;
+    <span style="color: #2aa1ae; background-color: #ecf3ec;">/* </span><span style="color: #2aa1ae; background-color: #ecf3ec;">return 0 on success, -1 on error </span><span style="color: #2aa1ae; background-color: #ecf3ec;">*/</span>
+</pre>
+</div>
+
+<dl class="org-dl">
+<dt>sockfd </dt><dd>File descriptor of socket</dd>
+<dt>*addr  </dt><dd>Points to the structure used to return the socket address</dd>
+<dt>addrlen</dt><dd>Points to integer that is already initialized to the size of the buffer pointed to by <i>addr</i></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org3410e28" class="outline-4">
+<h4 id="org3410e28"><span class="section-number-4">1.2.4</span> Connection Termination: <code>close()</code></h4>
+<div class="outline-text-4" id="text-1-2-4">
+<p>
+The usual way of terminating a stream socket connection is to call <code>close()</code>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org732f620" class="outline-3">
+<h3 id="org732f620"><span class="section-number-3">1.3</span> Datagram Sockets</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+IN PROGRESS
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+There are other possibilities than binding a server’s socket to a well-known
+address. For example, for an Internet domain socket, the server could omit the
+call to <code>bind()</code> and simply call <code>listen()</code>, which causes the kernel to choose an ephem-
+eral port for that socket. Afterward, the server can use <code>getsockname()</code> to retrieve the
+address of its socket. In this scenario, the server must then publish that address
+so that clients know how to locate the server’s socket. Such publication could
+be done by registering the server’s address with a centralized directory service
+application that clients then contact in order to obtain the address.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-10-01 Mon 12:38</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
